@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Ashenafi Tsegaye | Data Science & Data Analysis Expert</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta name="description" content="Transform your business with Ashenafi Tsegaye’s expertise in data science, machine learning, and Power BI analytics. Explore cutting-edge solutions for data-driven success." />
+    <meta name="keywords" content="data science, machine learning, Power BI, data visualization, time series forecasting, business intelligence, Python, DAX, data analysis" />
+    <meta property="og:title" content="Ashenafi Tsegaye - Data Science & Data Analysis Expert" />
+    <meta property="og:description" content="Discover impactful data science and Power BI projects that drive business growth and efficiency." />
+    <meta property="og:image" content="images/og-image.jpg" />
+    <meta property="og:url" content="https://ashenafitsegaye.com" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet" />
+    <script defer src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12/lib/typed.min.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #1A1A40; /* Sleek Navy */
+            color: #F5F5F5; /* Soft White */
+            font-size: 16px;
+        }
+        #intro {
+            background: linear-gradient(135deg, #FF6F61 0%, #1A1A40 100%); /* Coral to Navy */
+            color: #F5F5F5;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            animation: fadeIn 1s ease-in-out;
+            box-shadow: inset 0 0 20px rgba(255, 111, 97, 0.3);
+            padding: 3rem 1rem;
+        }
+        #about-me, #projects, #clients, #contact {
+            background: #1A1A40;
+            padding: 3rem 1rem;
+        }
+        .profile-img {
+            border-radius: 50%;
+            border: 4px solid #FF6F61; /* Coral */
+            box-shadow: 0 4px 20px rgba(255, 111, 97, 0.4);
+            animation: pulse 2s infinite;
+            width: 10rem;
+            height: 10rem;
+            max-width: 100%;
+        }
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        @keyframes fadeIn {
+            0% { opacity: 0; transform: translateY(20px); }
+            100% { opacity: 1; transform: translateY(0); }
+        }
+        .project-card {
+            background: #FFFFFF; /* White */
+            color: #1A1A40; /* Navy */
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 1rem;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(255, 111, 97, 0.3);
+        }
+        .project-card img {
+            transition: transform 0.3s;
+            width: 100%;
+            aspect-ratio: 16/9;
+            object-fit: cover;
+        }
+        .project-card:hover img {
+            transform: scale(1.05);
+        }
+        nav {
+            position: sticky;
+            top: 0;
+            background: #1A1A40;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(255, 111, 97, 0.2);
+            padding: 1rem;
+        }
+        .nav-links a {
+            color: #FF6F61; /* Coral */
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            transition: color 0.3s;
+        }
+        .nav-links a:hover {
+            color: #40C4FF; /* Sky Blue */
+        }
+        .scrolly {
+            cursor: pointer;
+        }
+        .client-card {
+            animation: fadeIn 0.5s ease-in-out;
+            background: #FFFFFF;
+            color: #1A1A40;
+            border: 2px solid #FF6F61;
+            border-radius: 1rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        .client-logo {
+            transition: transform 0.3s;
+            width: 10rem;
+            max-width: 100%;
+        }
+        .client-logo:hover {
+            transform: scale(1.1);
+        }
+        .back-to-top {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            background: #FF6F61;
+            color: #FFFFFF;
+            padding: 1rem;
+            border-radius: 50%;
+            display: none;
+            z-index: 1000;
+            transition: opacity 0.3s, background 0.3s;
+        }
+        .back-to-top:hover {
+            background: #40C4FF;
+        }
+        .category-badge {
+            background: #40C4FF; /* Sky Blue */
+            color: #FFFFFF;
+            padding: 0.3rem 1rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+        .skills-list li {
+            background: #FF6F61;
+            color: #FFFFFF;
+            padding: 0.5rem 1.2rem;
+            border-radius: 9999px;
+            display: inline-block;
+            margin: 0.5rem;
+            font-size: 0.9rem;
+        }
+        .cta-btn, .view-project-btn {
+            background: #FF6F61;
+            color: #FFFFFF;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s, color 0.3s;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        .cta-btn:hover, .view-project-btn:hover {
+            background: #40C4FF;
+            color: #FFFFFF;
+        }
+        .hamburger {
+            display: none;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: #FF6F61;
+        }
+        /* Responsive Design */
+        @media (max-width: 640px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #1A1A40;
+                padding: 1rem;
+                box-shadow: 0 2px 5px rgba(255, 111, 97, 0.2);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .nav-links a {
+                font-size: 1.25rem;
+                padding: 0.75rem;
+            }
+            .profile-img {
+                width: 8rem;
+                height: 8rem;
+            }
+            #intro h1 {
+                font-size: 2.5rem;
+            }
+            #intro h2 {
+                font-size: 1.5rem;
+            }
+            #intro p {
+                font-size: 1rem;
+            }
+            .project-card, .client-card {
+                width: 100%;
+            }
+            #projects h2, #about-me h2, #clients h2, #contact h2 {
+                font-size: 2rem;
+            }
+            .cta-btn, .view-project-btn {
+                width: 100%;
+                text-align: center;
+            }
+            .grid {
+                gap: 1rem;
+            }
+        }
+        @media (min-width: 641px) and (max-width: 768px) {
+            .hamburger {
+                display: block;
+            }
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #1A1A40;
+                padding: 1rem;
+                box-shadow: 0 2px 5px rgba(255, 111, 97, 0.2);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .project-card {
+                width: 100%;
+            }
+            #intro h1 {
+                font-size: 3rem;
+            }
+            #intro h2 {
+                font-size: 1.75rem;
+            }
+            .grid {
+                gap: 1.5rem;
+            }
+        }
+        @media (min-width: 769px) {
+            .nav-links {
+                display: flex !important;
+            }
+            .hamburger {
+                display: none;
+            }
+            .grid {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body class="bg-navy">
+    <!-- Back to Top Button -->
+    <a href="#intro" class="back-to-top scrolly" aria-label="Back to Top"><i class="fas fa-arrow-up"></i></a>
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
+        <!-- Nav -->
+        <nav id="nav" class="py-4">
+            <div class="flex justify-between items-center">
+                <a href="index.html" class="text-2xl font-bold text-coral sm:text-3xl">Ashenafi</a>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+                <ul class="nav-links flex justify-center space-x-4">
+                    <li><a href="#intro" class="scrolly" aria-label="Home">Home</a></li>
+                    <li><a href="#about-me" class="scrolly" aria-label="About Me">About Me</a></li>
+                    <li><a href="#projects" class="scrolly" aria-label="Projects">Projects</a></li>
+                    <li><a href="#clients" class="scrolly" aria-label="Clients">Clients</a></li>
+                    <li><a href="#mygoal" class="scrolly" aria-label="My Goal">My Goal</a></li>
+                    <li><a href="#contact" class="scrolly" aria-label="Contact">Contact</a></li>
+                    <li><a href="#contact" class="cta-btn" aria-label="Hire Me">Hire Me</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Intro -->
+        <div id="intro" class="py-12">
+            <img src="pp.jpg" alt="Ashenafi Tsegaye Profile Picture" class="profile-img mx-auto mb-6" />
+            <h1 class="text-4xl sm:text-5xl md:text-6xl font-bold">Ashenafi Tsegaye</h1>
+            <h2 class="text-2xl sm:text-3xl md:text-4xl mt-3"><span id="typed"></span></h2>
+            <p class="mt-6 max-w-3xl mx-auto text-lg sm:text-xl">Transform your business with data-driven insights through advanced data science, machine learning, and Power BI solutions tailored for success.</p>
+            <ul class="flex justify-center space-x-6 mt-8">
+                <li><a href="#projects" class="cta-btn" aria-label="View Projects"><i class="fas fa-briefcase mr-2"></i>Explore Projects</a></li>
+                <li><a href="#contact" class="cta-btn" aria-label="Hire Me"><i class="fas fa-envelope mr-2"></i>Get in Touch</a></li>
+            </ul>
+        </div>
+
+        <!-- Main -->
+        <div id="main" class="py-8">
+            <!-- About Me -->
+            <section id="about-me" class="py-12">
+                <div class="max-w-5xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-coral">About Me</h2>
+                    <p class="mt-6 text-lg sm:text-xl text-soft-white">
+                        I’m Ashenafi Tsegaye, a seasoned Data Scientist and Data Analyst dedicated to empowering businesses with actionable insights. With expertise in machine learning, time series forecasting, and Power BI analytics, I’ve delivered solutions that boost efficiency and profitability for clients in finance, healthcare, retail, and telecom. My approach combines cutting-edge technology with a deep understanding of business needs to create scalable, impactful results.
+                    </p>
+                    <h3 class="text-2xl sm:text-3xl font-semibold text-coral mt-8">Key Skills</h3>
+                    <ul class="skills-list flex flex-wrap justify-center mt-6">
+                        <li>Python</li>
+                        <li>TensorFlow</li>
+                        <li>PyTorch</li>
+                        <li>Sentiment Analysis</li>
+                        <li>Natural Language Processing</li>
+                        <li>Time Series Forecasting</li>
+                        <li>ARIMA</li>
+                        <li>LSTM</li>
+                        <li>Prophet</li>
+                        <li>Anomaly Detection</li>
+                        <li>Power BI</li>
+                        <li>DAX</li>
+                        <li>Power Query</li>
+                        <li>Data Visualization</li>
+                        <li>Data Modeling</li>
+                        <li>SQL</li>
+                        <li>ETL Processes</li>
+                        <li>Dashboard Design</li>
+                        <li>Azure Analytics</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Projects -->
+            <section id="projects" class="py-12">
+                <div class="max-w-6xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-coral">Projects</h2>
+                    <p class="mt-6 text-lg sm:text-xl text-soft-white">Discover my portfolio of data science and Power BI projects that have driven measurable results for clients across industries.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                        <article class="project-card p-4" data-category="Classification">
+                            <header>
+                                <span class="category-badge">Classification</span>
+                                <h2 class="text-xl sm:text-2xl font-bold"><a href="https://github.com/Ashenafi-code/projects-/blob/main/portfolio_projects/Loan%20Default%20Prediction.ipynb" target="_blank" rel="noopener noreferrer">Loan Default Prediction</a></h2>
+                            </header>
+                            <a href="https://github.com/Ashenafi-code/projects-/blob/main/portfolio_projects/Loan%20Default%20Prediction.ipynb" class="block mt-3" target="_blank" rel="noopener noreferrer">
+                                <img src="https://i.pinimg.com/736x/4f/26/a8/4f26a85b71492f4a992c3a0899817a58.jpg" alt="Loan Default Prediction Dashboard" class="w-full rounded-md" loading="lazy" />
+                            </a>
+                            <p class="mt-4 text-base sm:text-lg">Enhanced risk assessment for financial institutions by predicting loan defaults with advanced feature engineering, achieving 85% accuracy.</p>
+                            <ul class="mt-4">
+                                <li><a href="https://github.com/Ashenafi-code/projects-/blob/main/portfolio_projects/Loan%20Default%20Prediction.ipynb" class="view-project-btn" target="_blank" rel="noopener noreferrer">View Project</a></li>
+                            </ul>
+                        </article>
+                         <!---
+                        <article class="project-card p-4" data-category="Time Series">
+                            <header>
+                                <span class="category-badge">Time Series</span>
+                                <h2 class="text-xl sm:text-2xl font-bold"><a href="https://github.com/Ashenafi-code/projects-/blob/main/portfolio_projects/Rainfall%20Prediction.ipynb" target="_blank" rel="noopener noreferrer">Rainfall Prediction</a></h2>
+                            </header>
+                            <a href="https://github.com/Ashenafi-code/projects-/blob/main/portfolio_projects/Rainfall%20Prediction.ipynb" class="block mt-3" target="_blank" rel="noopener noreferrer">
+                                <img src="https://i.pinimg.com/1200x/41/f1/fb/41f1fb757bf18711d49b8d2b028e785e.jpg" alt="Rainfall Prediction Dashboard" class="w-full rounded-md" loading="lazy" />
+                            </a>
+                            <p class="mt-4 text-base sm:text-lg">Improved agricultural planning with accurate rainfall forecasts using regression models, reducing operational risks for clients.</p>
+                            <ul class="mt-4">
+                                <li><a href="https://github.com/Ashenafi-code/projects-/blob/main/portfolio_projects/Rainfall%20Prediction.ipynb" class="view-project-btn" target="_blank" rel="noopener noreferrer">View Project</a></li>
+                            </ul>
+                        </article>
+                        -->
+                         <article class="project-card p-3 sm:p-4" data-category="Analytics">
+                            <header>
+                                <span class="category-badge">Analytics</span>
+                                <h2 class="text-lg sm:text-xl font-bold"><a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/HR%20Analytics%20Dashboard.pbix" target="_blank" rel="noopener noreferrer">HR Analytics Dashboard</a></h2>
+                            </header>
+                            <a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/HR%20Analytics%20Dashboard.pbix" class="block mt-2" target="_blank" rel="noopener noreferrer">
+                                <img src="hr.png" alt="KPI Scorecard Dashboard" class="w-full rounded-md" loading="lazy" />
+                            </a>
+                            <p class="mt-4 text-base sm:text-lg">Integrated HR data with Power BI Service for employee performance tracking and retention analysis.</p>
+                            <ul class="mt-4">
+                                <li><a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/HR%20Analytics%20Dashboard.pbix" class="view-project-btn" target="_blank" rel="noopener noreferrer">View Project</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="project-card p-4" data-category="Dashboard">
+                            <header>
+                                <span class="category-badge">Dashboard</span>
+                                <h2 class="text-xl sm:text-2xl font-bold"><a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/Ecommerce%20Sales%20Dashboard.pbix" target="_blank" rel="noopener noreferrer">Sales Performance Dashboard</a></h2>
+                            </header>
+                            <a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/Ecommerce%20Sales%20Dashboard.pbix" class="block mt-3" target="_blank" rel="noopener noreferrer">
+                                <img src="s.png" alt="Sales Performance Dashboard" class="w-full rounded-md" loading="lazy" />
+                            </a>
+                            <p class="mt-4 text-base sm:text-lg">Boosted e-commerce revenue by 20% with a real-time Power BI dashboard featuring KPI visuals and dynamic slicers.</p>
+                            <ul class="mt-4">
+                                <li><a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/Ecommerce%20Sales%20Dashboard.pbix" class="view-project-btn" target="_blank" rel="noopener noreferrer">View Project</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="project-card p-4" data-category="Data Analysis">
+                            <header>
+                                <span class="category-badge">Data Analysis</span>
+                                <h2 class="text-xl sm:text-2xl font-bold"><a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/Finacial_Dashboard.pbix" target="_blank" rel="noopener noreferrer">Financial Reporting Dashboard</a></h2>
+                            </header>
+                            <a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/Finacial_Dashboard.pbix" class="block mt-3" target="_blank" rel="noopener noreferrer">
+                                <img src="f.png" alt="Financial Reporting Dashboard" class="w-full rounded-md" loading="lazy" />
+                            </a>
+                            <p class="mt-4 text-base sm:text-lg">Streamlined financial decision-making with a Power BI dashboard using DAX for year-over-year analysis, saving 15 hours monthly.</p>
+                            <ul class="mt-4">
+                                <li><a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/Finacial_Dashboard.pbix" class="view-project-btn" target="_blank" rel="noopener noreferrer">View Project</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="project-card p-4" data-category="Time Series">
+                            <header>
+                                <span class="category-badge">Time Series</span>
+                                <h2 class="text-xl sm:text-2xl font-bold"><a href="https://github.com/Ashenafi-code/projects-/blob/main/portfolio_projects/Retail%20Sales%20Time%20Series%20Forecast_.ipynb" target="_blank" rel="noopener noreferrer">Retail Sales Time Series Forecasting</a></h2>
+                            </header>
+                            <a href="https://github.com/Ashenafi-code/projects-/blob/main/portfolio_projects/Retail%20Sales%20Time%20Series%20Forecast_.ipynb" class="block mt-3" target="_blank" rel="noopener noreferrer">
+                                <img src="project.jpg" alt="Retail Sales Forecasting Dashboard" class="w-full rounded-md" loading="lazy" />
+                            </a>
+                            <p class="mt-4 text-base sm:text-lg">Optimized inventory planning with ARIMA and Prophet models, reducing stockouts by 30% for retail clients.</p>
+                            <ul class="mt-4">
+                                <li><a href="https://github.com/Ashenafi-code/projects-/blob/main/portfolio_projects/Retail%20Sales%20Time%20Series%20Forecast_.ipynb" class="view-project-btn" target="_blank" rel="noopener noreferrer">View Project</a></li>
+                            </ul>
+                        </article>
+
+                        <article class="project-card p-4" data-category="Dashboard">
+                            <header>
+                                <span class="category-badge">Dashboard</span>
+                                <h2 class="text-xl sm:text-2xl font-bold"><a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/Retail%20Inventory%20Dashboard.pbix" target="_blank" rel="noopener noreferrer">Retail Inventory Dashboard</a></h2>
+                            </header>
+                            <a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/Retail%20Inventory%20Dashboard.pbix" class="block mt-3" target="_blank" rel="noopener noreferrer">
+                                <img src="r.png" alt="Retail Inventory Dashboard" class="w-full rounded-md" loading="lazy" />
+                            </a>
+                            <p class="mt-4 text-base sm:text-lg">Enhanced inventory efficiency with a Power BI dashboard, providing real-time stock insights and predictive analytics.</p>
+                            <ul class="mt-4">
+                                <li><a href="https://github.com/Ashenafi-code/pbi/blob/main/pbi/Retail%20Inventory%20Dashboard.pbix" class="view-project-btn" target="_blank" rel="noopener noreferrer">View Project</a></li>
+                            </ul>
+                        </article>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <a href="projects.html" class="cta-btn">View All Projects</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Clients -->
+            <!--
+            <section id="clients" class="py-12">
+                <div class="max-w-6xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-coral">Trusted by Clients</h2>
+                    <p class="mt-6 text-lg sm:text-xl text-soft-white">Proud to partner with leading organizations to deliver data-driven solutions that transform operations.</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+                        <div class="client-card">
+                            <img src="client1.png" alt="Client 1 Logo" class="client-logo mx-auto mb-4" loading="lazy" />
+                            <p class="text-base">"Ashenafi’s predictive models reduced our financial risks by 25%."</p>
+                            <p class="mt-2 text-sm font-semibold">— Finance Corp</p>
+                        </div>
+                        <div class="client-card">
+                            <img src="client2.png" alt="Client 2 Logo" class="client-logo mx-auto mb-4" loading="lazy" />
+                            <p class="text-base">"The Power BI dashboards streamlined our reporting process significantly."</p>
+                            <p class="mt-2 text-sm font-semibold">— Retail Solutions</p>
+                        </div>
+                        <div class="client-card">
+                            <img src="client3.png" alt="Client 3 Logo" class="client-logo mx-auto mb-4" loading="lazy" />
+                            <p class="text-base">"His forecasting expertise optimized our supply chain operations."</p>
+                            <p class="mt-2 text-sm font-semibold">— Logistics Inc</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            -->
+
+            <!-- My Goal -->
+            <section id="mygoal" class="py-12">
+                <div class="max-w-3xl mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-coral">My Goal</h2>
+                    <p class="mt-6 text-lg sm:text-xl text-soft-white">
+                        My mission is to empower your business with transformative data science and analytics solutions. By leveraging machine learning and Power BI, I deliver insights that drive strategic decisions, optimize operations, and fuel sustainable growth. Let’s collaborate to turn your data into a competitive advantage.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contact -->
+            <section id="contact" class="py-12">
+                <div class="max-w-lg mx-auto text-center">
+                    <h2 class="text-3xl sm:text-4xl font-bold text-coral">Let’s Work Together</h2>
+                    <p class="mt-6 text-lg sm:text-xl text-soft-white">Ready to unlock the power of your data? Contact me to discuss your project and drive results.</p>
+                    <!--
+                    <form method="post" action="https://formspree.io/f/your-form-id" class="mt-8">
+                        <div class="space-y-6">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-soft-white">Name</label>
+                                <input type="text" name="name" id="name" class="w-full p-3 rounded-md border bg-white text-navy" required aria-label="Your name" />
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-soft-white">Email</label>
+                                <input type="email" name="email" id="email" class="w-full p-3 rounded-md border bg-white text-navy" required aria-label="Your email" />
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-soft-white">Message</label>
+                                <textarea name="message" id="message" rows="5" class="w-full p-3 rounded-md border bg-white text-navy" required aria-label="Your message"></textarea>
+                            </div>
+                        </div>
+                        <div class="mt-8">
+                            <button type="submit" class="cta-btn w-full">Send Message</button>
+                        </div>
+                    </form>
+                    -->
+                    <div class="mt-10">
+                        <h3 class="text-lg sm:text-xl font-semibold text-soft-white">Phone</h3>
+                        <p><a href="tel:+251916311660" class="text-coral hover:text-sky-blue">+251916311660</a></p>
+                        <h3 class="text-lg sm:text-xl font-semibold text-soft-white mt-6">Email</h3>
+                        <p><a href="mailto:ashenafi1927@gmail.com" class="text-coral hover:text-sky-blue">ashenafi1927@gmail.com</a></p>
+                        <h3 class="text-lg sm:text-xl font-semibold text-soft-white mt-6">GitHub</h3>
+                        <p><a href="https://github.com/Ashenafi-code" class="text-coral hover:text-sky-blue" target="_blank" rel="noopener noreferrer">github.com/Ashenafi-code</a></p>
+                        <h3 class="text-lg sm:text-xl font-semibold text-soft-white mt-6">LinkedIn</h3>
+                        <p><a href="https://linkedin.com/in/ashenafi-tsegaye" class="text-coral hover:text-sky-blue" target="_blank" rel="noopener noreferrer">linkedin.com/in/ashenafi-tsegaye</a></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Copyright -->
+        <div id="copyright" class="py-4 bg-navy text-coral text-center">
+            <p class="text-sm sm:text-base">© 2025 Ashenafi Tsegaye. All rights reserved.</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Enhanced interactivity: Smooth scrolling, back-to-top, and project image zoom
+        function initInteractivity() {
+            // Smooth scrolling with nav offset
+            document.querySelectorAll('.scrolly').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetElement = document.getElementById(targetId);
+                    const navHeight = document.querySelector('nav').offsetHeight;
+                    window.scrollTo({
+                        top: targetElement.offsetTop - navHeight,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+
+            // Back to top button visibility
+            const backToTop = document.querySelector('.back-to-top');
+            window.addEventListener('scroll', () => {
+                backToTop.style.display = window.scrollY > 300 ? 'block' : 'none';
+            });
+
+            // Hamburger menu toggle
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            hamburger.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+
+            // Typed.js for hero tagline
+            new Typed('#typed', {
+                strings: ['Data Science Expert', 'Power BI Specialist', 'Machine Learning Engineer', 'Data Analysis'],
+                typeSpeed: 50,
+                backSpeed: 30,
+                loop: true
+            });
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', initInteractivity);
+    </script>
+</body>
+</html>
